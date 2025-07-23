@@ -2,7 +2,8 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven-3.9.6'
+        maven 'Maven'
+        jdk 'JDK17'
     }
 
     stages {
@@ -15,7 +16,7 @@ pipeline {
         stage('Build & SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('SonarQube') {
-                    sh 'mvn clean package sonar:sonar'
+                    sh 'mvn clean package sonar:sonar -Dsonar.host.url=http://sonarqube:9000'
                 }
             }
         }
