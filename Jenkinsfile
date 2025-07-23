@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/YGARDAMN/APP-TECHNOVA.git'
+                git branch: 'main', url: 'https://github.com/YGARDAMN/APP-TECHNOVA.git'
             }
         }
 
