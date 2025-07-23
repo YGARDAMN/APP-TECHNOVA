@@ -12,12 +12,10 @@ pipeline {
             }
         }
 
-        stage('Build & SonarQube') {
+        stage('Build & SonarQube Analysis') {
             steps {
-                dir('backend') { // ganti sesuai folder pom.xml
-                    withSonarQubeEnv('SonarQube') {
-                        sh 'mvn clean package sonar:sonar'
-                    }
+                withSonarQubeEnv('SonarQube') {
+                    sh 'mvn clean package sonar:sonar'
                 }
             }
         }
