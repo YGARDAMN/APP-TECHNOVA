@@ -3,13 +3,13 @@ pipeline {
 
     environment {
         SONARQUBE_ENV = 'SonarQube'
-        DOCKER_IMAGE = 'ygardamn/technova-app:latest'
+        DOCKER_IMAGE = 'ygardamn004/technova-app:latest'
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/YGARDAMN/App-TechNova.git'
+                git 'https://github.com/YGARDAMN/APP-TECHNOVA.git'
             }
         }
 
