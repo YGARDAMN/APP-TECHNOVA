@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Manajemen Inventaris</title>
+
+    <!-- Memuat Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Memuat Font Inter dari Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Menggunakan font Inter sebagai font utama */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="flex flex-col md:flex-row min-h-screen">
+        <!-- Sidebar -->
+        <aside class="w-full md:w-64 bg-white shadow-md">
+            <div class="p-6">
+                <h1 class="text-2xl font-bold text-gray-900">TechNova</h1>
+                <p class="text-sm text-gray-500">Inventaris</p>
+            </div>
+            <nav class="mt-6">
+                <a href="#" class="flex items-center px-6 py-3 text-gray-700 bg-gray-200">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                    <span class="mx-3">Dashboard</span>
+                </a>
+                <a href="#" class="flex items-center px-6 py-3 text-gray-600 hover:bg-gray-200">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                    </svg>
+                    <span class="mx-3">Produk</span>
+                </a>
+                <a href="#" class="flex items-center px-6 py-3 text-gray-600 hover:bg-gray-200">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 17v-2a4 4 0 00-4-4H3V9h2a4 4 0 004-4V3l4 4-4 4zM19 5h-2a4 4 0 00-4 4v2a4 4 0 004 4h2v2h-2a4 4 0 00-4 4v2" />
+                    </svg>
+                    <span class="mx-3">Laporan</span>
+                </a>
+                <a href="#" class="flex items-center px-6 py-3 text-gray-600 hover:bg-gray-200">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span class="mx-3">Pengaturan</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6 md:p-10">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Selamat Datang, Admin!</h2>
+
+            <!-- Summary Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center">
+                    <div class="bg-blue-100 p-3 rounded-full">
+                        <svg class="h-6 w-6 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                        </svg>
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-sm text-gray-500">Total Produk</p>
+                        <p class="text-2xl font-bold text-gray-900">1,250</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center">
+                    <div class="bg-yellow-100 p-3 rounded-full">
+                        <svg class="h-6 w-6 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                        </svg>
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-sm text-gray-500">Stok Hampir Habis</p>
+                        <p class="text-2xl font-bold text-gray-900">42</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center">
+                    <div class="bg-green-100 p-3 rounded-full">
+                        <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                        </svg>
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-sm text-gray-500">Produk Terlaris</p>
+                        <p class="text-xl font-bold text-gray-900">Mouse Gaming X1</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inventory Table -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6 flex flex-col sm:flex-row justify-between items-center">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4 sm:mb-0">Daftar Inventaris</h3>
+                    <button
+                        class="w-full sm:w-auto bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+                        + Tambah Produk
+                    </button>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm text-left text-gray-500">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                            <tr>
+                                <th scope="col" class="px-6 py-3">ID Produk</th>
+                                <th scope="col" class="px-6 py-3">Nama Produk</th>
+                                <th scope="col" class="px-6 py-3">Kategori</th>
+                                <th scope="col" class="px-6 py-3">Stok</th>
+                                <th scope="col" class="px-6 py-3">Harga</th>
+                                <th scope="col" class="px-6 py-3 text-center">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b hover:bg-gray-50">
+                                <td class="px-6 py-4 font-medium text-gray-900">#TN-001</td>
+                                <td class="px-6 py-4 font-medium text-gray-900">Laptop ProBook 14"</td>
+                                <td class="px-6 py-4">Elektronik</td>
+                                <td class="px-6 py-4">120</td>
+                                <td class="px-6 py-4">Rp 12.500.000</td>
+                                <td class="px-6 py-4 text-center">
+                                    <a href="#" class="font-medium text-blue-600 hover:underline mr-3">Edit</a>
+                                    <a href="#" class="font-medium text-red-600 hover:underline">Hapus</a>
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-50">
+                                <td class="px-6 py-4 font-medium text-gray-900">#TN-002</td>
+                                <td class="px-6 py-4 font-medium text-gray-900">Mouse Gaming X1</td>
+                                <td class="px-6 py-4">Aksesoris</td>
+                                <td class="px-6 py-4">350</td>
+                                <td class="px-6 py-4">Rp 350.000</td>
+                                <td class="px-6 py-4 text-center">
+                                    <a href="#" class="font-medium text-blue-600 hover:underline mr-3">Edit</a>
+                                    <a href="#" class="font-medium text-red-600 hover:underline">Hapus</a>
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-50">
+                                <td class="px-6 py-4 font-medium text-gray-900">#TN-003</td>
+                                <td class="px-6 py-4 font-medium text-gray-900">Keyboard Mekanikal</td>
+                                <td class="px-6 py-4">Aksesoris</td>
+                                <td class="px-6 py-4">85</td>
+                                <td class="px-6 py-4">Rp 890.000</td>
+                                <td class="px-6 py-4 text-center">
+                                    <a href="#" class="font-medium text-blue-600 hover:underline mr-3">Edit</a>
+                                    <a href="#" class="font-medium text-red-600 hover:underline">Hapus</a>
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-50">
+                                <td class="px-6 py-4 font-medium text-gray-900">#TN-004</td>
+                                <td class="px-6 py-4 font-medium text-gray-900">Monitor 24" IPS</td>
+                                <td class="px-6 py-4">Elektronik</td>
+                                <td class="px-6 py-4">
+                                    <span
+                                        class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full">8</span>
+                                </td>
+                                <td class="px-6 py-4">Rp 2.100.000</td>
+                                <td class="px-6 py-4 text-center">
+                                    <a href="#" class="font-medium text-blue-600 hover:underline mr-3">Edit</a>
+                                    <a href="#" class="font-medium text-red-600 hover:underline">Hapus</a>
+                                </td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td class="px-6 py-4 font-medium text-gray-900">#TN-005</td>
+                                <td class="px-6 py-4 font-medium text-gray-900">Webcam HD 1080p</td>
+                                <td class="px-6 py-4">Aksesoris</td>
+                                <td class="px-6 py-4">210</td>
+                                <td class="px-6 py-4">Rp 550.000</td>
+                                <td class="px-6 py-4 text-center">
+                                    <a href="#" class="font-medium text-blue-600 hover:underline mr-3">Edit</a>
+                                    <a href="#" class="font-medium text-red-600 hover:underline">Hapus</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>
