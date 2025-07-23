@@ -6,6 +6,7 @@ pipeline {
     environment {
         SONAR_PROJECT_KEY = 'TechNova'
         SONAR_SCANNER_HOME = tool 'SonarQubeScanner'
+        DOCKER_HUB_REPO = 'ygardamn004/technova'
     }
     stages {
         stage('GitHub') {
@@ -32,6 +33,13 @@ pipeline {
                         -Dsonar.login=${SONAR_TOKEN}
                         """
                     }
+                }
+            }
+        }
+        stage{'Docker Image'}{
+            steps {
+                script {
+                    docker.build("${DOCKER_HUB_REPO}:latest")
                 }
             }
         }
