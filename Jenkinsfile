@@ -1,9 +1,8 @@
 pipeline {
   agent any
-  stages {
     stage('Clone Repo') {
       steps {
-        git 'https://github.com/YGARDAMN/APP-TECHNOVA'
+        git branch: 'main', url: 'https://github.com/YGARDAMN/APP-TECHNOVA.git'
       }
     }
     stage('Build Docker Image') {
